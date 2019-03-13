@@ -10,4 +10,5 @@ public interface OwnerRepository {
     List<Owner> findBySurname(String surname);
     void create(Owner owner);
     Owner update(Owner owner);
+    void delete(Long id);
 }

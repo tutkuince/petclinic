@@ -15,7 +15,7 @@ public class OwnerRepositoryInMemoryImpl implements OwnerRepository {
     public OwnerRepositoryInMemoryImpl() {
         Owner owner1 = new Owner();
         owner1.setId(1L);
-        owner1.setSurname("Tutku");
+        owner1.setName("Tutku");
         owner1.setSurname("Ince");
 
         Owner owner2 = new Owner();

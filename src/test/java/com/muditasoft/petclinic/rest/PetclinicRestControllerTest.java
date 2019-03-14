@@ -8,6 +8,10 @@ import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 public class PetclinicRestControllerTest {
 
     private RestTemplate restTemplate;
@@ -23,5 +27,15 @@ public class PetclinicRestControllerTest {
 
         MatcherAssert.assertThat(response.getStatusCodeValue(), Matchers.equalTo(200));
         MatcherAssert.assertThat(response.getBody().getName(), Matchers.equalTo("Tutku"));
+    }
+
+    @Test
+    public void testGetOwnersBySurname() {
+        final ResponseEntity<List> response = restTemplate.getForEntity("http://localhost:8080/rest/owner?sn=Ince", List.class);
+        MatcherAssert.assertThat(response.getStatusCodeValue(), Matchers.equalTo(200));
+
+        List<Map<String, String>> body = response.getBody();
+        final List<String> nameList = body.stream().map(o -> o.get("name")).collect(Collectors.toList());
+        MatcherAssert.assertThat(nameList, Matchers.containsInAnyOrder("Tutku"));
     }
 }

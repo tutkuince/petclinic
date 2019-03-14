@@ -463,3 +463,13 @@
 2019-03-14 15:34:27.120 DEBUG 14988 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json]
 2019-03-14 15:34:27.120 DEBUG 14988 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Owner{id=1, name='Tutku', surname='Ince'}]]
 2019-03-14 15:34:27.120 DEBUG 14988 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-14 15:36:46.831 DEBUG 14988 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/rest/owners", parameters={}
+2019-03-14 15:36:46.841 DEBUG 14988 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<java.util.List<com.muditasoft.petclinic.model.Owner>> com.muditasoft.petclinic.rest.PetclinicRestController.getOwners()
+2019-03-14 15:36:46.841 DEBUG 14988 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-14 15:36:46.841 DEBUG 14988 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Owner{id=1, name='Tutku', surname='Ince'}, Owner{id=2, name='Emin', surname='Koklu'}, Owner{id=3, n (truncated)...]
+2019-03-14 15:36:46.841 DEBUG 14988 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-14 15:37:04.911 DEBUG 14988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/rest/owners", parameters={}
+2019-03-14 15:37:04.911 DEBUG 14988 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<java.util.List<com.muditasoft.petclinic.model.Owner>> com.muditasoft.petclinic.rest.PetclinicRestController.getOwners()
+2019-03-14 15:37:04.921 DEBUG 14988 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-14 15:37:04.921 DEBUG 14988 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Owner{id=1, name='Tutku', surname='Ince'}, Owner{id=2, name='Emin', surname='Koklu'}, Owner{id=3, n (truncated)...]
+2019-03-14 15:37:04.921 DEBUG 14988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

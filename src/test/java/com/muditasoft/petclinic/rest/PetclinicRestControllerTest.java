@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -47,5 +48,19 @@ public class PetclinicRestControllerTest {
         List<Map<String, String>> body = response.getBody();
         final List<String> nameList = body.stream().map(o -> o.get("name")).collect(Collectors.toList());
         MatcherAssert.assertThat(nameList, Matchers.containsInAnyOrder("Tutku", "Emin", "Ugur", "Alper"));
+    }
+
+    @Test
+    public void testCreateOwner() {
+        Owner owner = new Owner();
+        owner.setName("Utku");
+        owner.setSurname("Ince");
+
+        final URI location = restTemplate.postForLocation("http://localhost:8080/rest/owner", owner);
+
+        Owner owner1 = restTemplate.getForObject(location, Owner.class);
+
+        MatcherAssert.assertThat(owner1.getName(), Matchers.equalTo(owner.getName()));
+        MatcherAssert.assertThat(owner1.getSurname(), Matchers.equalTo(owner.getSurname()));
     }
 }

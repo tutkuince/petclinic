@@ -1,5 +1,6 @@
 package com.muditasoft.petclinic.rest;
 
+import com.muditasoft.petclinic.exception.InternalSeverException;
 import com.muditasoft.petclinic.exception.OwnerNotFoundException;
 import com.muditasoft.petclinic.model.Owner;
 import com.muditasoft.petclinic.service.PetclinicService;
@@ -77,9 +78,9 @@ public class PetclinicRestController {
             petclinicService.deleteOwner(id);
             return ResponseEntity.ok().build();
         } catch (OwnerNotFoundException e) {
-            return ResponseEntity.notFound().build();
+            throw new OwnerNotFoundException(e.getMessage());
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+            throw new InternalSeverException(e);
         }
     }
 }

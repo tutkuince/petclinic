@@ -55,4 +55,19 @@ public class PetclinicRestController {
         }
 
     }
+
+    @PutMapping("/owner/{id}")
+    public ResponseEntity<?> updateOwner(@PathVariable("id") Long id, @RequestBody Owner ownerRequest) {
+        try {
+            Owner owner = petclinicService.findOwner(id);
+            owner.setName(ownerRequest.getName());
+            owner.setSurname(ownerRequest.getSurname());
+            petclinicService.updateOwner(owner);
+            return ResponseEntity.ok().build();
+        } catch (OwnerNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }

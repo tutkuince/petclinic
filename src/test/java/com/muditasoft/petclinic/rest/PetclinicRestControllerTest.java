@@ -63,4 +63,18 @@ public class PetclinicRestControllerTest {
         MatcherAssert.assertThat(owner1.getName(), Matchers.equalTo(owner.getName()));
         MatcherAssert.assertThat(owner1.getSurname(), Matchers.equalTo(owner.getSurname()));
     }
+
+    @Test
+    public void testUpdateOwner() {
+        Owner owner = restTemplate.getForObject("http://localhost:8080/rest/owner/2", Owner.class);
+
+        MatcherAssert.assertThat(owner.getName(), Matchers.equalTo("Emin"));
+
+        owner.setSurname("Ince");
+        restTemplate.put("http://localhost:8080/rest/owner/2", owner);
+
+        owner = restTemplate.getForObject("http://localhost:8080/rest/owner/2", Owner.class);
+
+        MatcherAssert.assertThat(owner.getSurname(), Matchers.equalTo("Ince"));
+    }
 }

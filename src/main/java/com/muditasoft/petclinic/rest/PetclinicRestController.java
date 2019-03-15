@@ -5,6 +5,9 @@ import com.muditasoft.petclinic.exception.OwnerNotFoundException;
 import com.muditasoft.petclinic.model.Owner;
 import com.muditasoft.petclinic.service.PetclinicService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,15 +36,15 @@ public class PetclinicRestController {
         return ResponseEntity.ok(owners);
     }
 
-    @GetMapping("/owner/{id}")
-    public ResponseEntity<Owner> getOwner(@PathVariable("id") Long id) {
-        try {
-            Owner owner = petclinicService.findOwner(id);
-            return ResponseEntity.ok(owner);
-        } catch (OwnerNotFoundException e) {
-            return ResponseEntity.notFound().build();
-        }
-    }
+//    @GetMapping("/owner/{id}")
+//    public ResponseEntity<Owner> getOwner(@PathVariable("id") Long id) {
+//        try {
+//            Owner owner = petclinicService.findOwner(id);
+//            return ResponseEntity.ok(owner);
+//        } catch (OwnerNotFoundException e) {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
 
     // After creation process, return owner's uri
     @PostMapping("/owner")
@@ -81,6 +84,23 @@ public class PetclinicRestController {
             throw new OwnerNotFoundException(e.getMessage());
         } catch (Exception e) {
             throw new InternalSeverException(e);
+        }
+    }
+
+    @GetMapping(produces = "application/json", value = "/owner/{id}")
+    public ResponseEntity<?> getOwnerAsHateoasResource(@PathVariable("id") Long id) {
+        try {
+            Owner owner = petclinicService.findOwner(id);
+            Link self = ControllerLinkBuilder.linkTo(PetclinicRestController.class).slash("/owner/" + id).withSelfRel();
+            Link create = ControllerLinkBuilder.linkTo(PetclinicRestController.class).slash("/owner").withRel("create");
+            Link update = ControllerLinkBuilder.linkTo(PetclinicRestController.class).slash("/owner/" + id).withRel("update");
+            Link delete = ControllerLinkBuilder.linkTo(PetclinicRestController.class).slash("/owner/" + id).withRel("delete");
+
+            Resource<Owner> resource = new Resource<>(owner, self, create, update, delete);
+
+            return ResponseEntity.ok(resource);
+        } catch (OwnerNotFoundException e) {
+            return ResponseEntity.notFound().build();
         }
     }
 }

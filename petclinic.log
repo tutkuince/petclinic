@@ -1240,3 +1240,245 @@ java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
 2019-03-15 14:47:51.570 DEBUG 9320 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 2019-03-15 14:47:51.584 DEBUG 9320 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
 2019-03-15 14:47:51.592 DEBUG 9320 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2019-03-15 14:49:29.298  INFO 15680 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Starting PetclinicApplication on DESKTOP-4GSH56K with PID 15680 (C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic\target\classes started by tutku in C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic)
+2019-03-15 14:49:29.308  INFO 15680 --- [restartedMain] c.m.petclinic.PetclinicApplication       : No active profile set, falling back to default profiles: default
+2019-03-15 14:49:29.398  INFO 15680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-15 14:49:29.398  INFO 15680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-15 14:49:30.876  INFO 15680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-15 14:49:30.906  INFO 15680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-03-15 14:49:31.616  INFO 15680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8228ce37] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-15 14:49:32.150  INFO 15680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-03-15 14:49:32.190  INFO 15680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-15 14:49:32.190  INFO 15680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-15 14:49:32.190  INFO 15680 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.1+13\bin\compressedrefs;C:\Program Files\Java\jdk-11.0.1+13\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Brackets\command;C:\Program Files\Apache Software Foundation\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk-11.0.1+13\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Users\tutku\AppData\Local\Microsoft\WindowsApps;C:\Users\tutku\AppData\Roaming\npm;.]
+2019-03-15 14:49:32.300  INFO 15680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-15 14:49:32.300 DEBUG 15680 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-03-15 14:49:32.300  INFO 15680 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2902 ms
+2019-03-15 14:49:32.800 DEBUG 15680 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2019-03-15 14:49:32.850  INFO 15680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-15 14:49:32.930  INFO 15680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-15 14:49:33.020  INFO 15680 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-15 14:49:33.080  INFO 15680 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-15 14:49:33.080  INFO 15680 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-15 14:49:33.210  INFO 15680 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-15 14:49:33.340  INFO 15680 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-03-15 14:49:33.520  INFO 15680 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7a69fb71'
+2019-03-15 14:49:33.520  INFO 15680 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-15 14:49:33.580  INFO 15680 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-15 14:49:33.670 DEBUG 15680 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-03-15 14:49:33.860  INFO 15680 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-15 14:49:33.870 DEBUG 15680 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-03-15 14:49:33.900  WARN 15680 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-15 14:49:33.940 DEBUG 15680 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2019-03-15 14:49:33.960 DEBUG 15680 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-03-15 14:49:33.970 DEBUG 15680 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-03-15 14:49:34.040  INFO 15680 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-03-15 14:49:34.320  INFO 15680 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-15 14:49:34.420  INFO 15680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-15 14:49:34.420  INFO 15680 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Started PetclinicApplication in 5.769 seconds (JVM running for 7.189)
+2019-03-15 14:49:37.709  INFO 15680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-15 14:49:37.710  INFO 15680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-15 14:49:37.711 DEBUG 15680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-03-15 14:49:37.719 DEBUG 15680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-03-15 14:49:37.720  INFO 15680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-03-15 14:49:37.735 DEBUG 15680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/1", parameters={}
+2019-03-15 14:49:37.745 DEBUG 15680 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<com.muditasoft.petclinic.model.Owner> com.muditasoft.petclinic.rest.PetclinicRestController.getOwner(java.lang.Long)
+2019-03-15 14:49:37.866 DEBUG 15680 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 14:49:37.869 DEBUG 15680 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Owner{id=1, name='Tutku', surname='Ince'}]
+2019-03-15 14:49:37.887 DEBUG 15680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 14:49:43.468 DEBUG 15680 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/1", parameters={}
+2019-03-15 14:49:43.478 DEBUG 15680 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<com.muditasoft.petclinic.model.Owner> com.muditasoft.petclinic.rest.PetclinicRestController.getOwner(java.lang.Long)
+2019-03-15 14:49:43.478 DEBUG 15680 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 14:49:43.478 DEBUG 15680 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Owner{id=1, name='Tutku', surname='Ince'}]
+2019-03-15 14:49:43.478 DEBUG 15680 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:05:46.720  INFO 15608 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Starting PetclinicApplication on DESKTOP-4GSH56K with PID 15608 (C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic\target\classes started by tutku in C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic)
+2019-03-15 15:05:46.720  INFO 15608 --- [restartedMain] c.m.petclinic.PetclinicApplication       : No active profile set, falling back to default profiles: default
+2019-03-15 15:05:46.810  INFO 15608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-15 15:05:46.810  INFO 15608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-15 15:05:48.340  INFO 15608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-15 15:05:48.370  INFO 15608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-03-15 15:05:49.100  INFO 15608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$beeb105b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-15 15:05:49.130  INFO 15608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$3e6b5d8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-15 15:05:49.700  INFO 15608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-03-15 15:05:49.740  INFO 15608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-15 15:05:49.740  INFO 15608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-15 15:05:49.740  INFO 15608 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.1+13\bin\compressedrefs;C:\Program Files\Java\jdk-11.0.1+13\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Brackets\command;C:\Program Files\Apache Software Foundation\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk-11.0.1+13\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Users\tutku\AppData\Local\Microsoft\WindowsApps;C:\Users\tutku\AppData\Roaming\npm;.]
+2019-03-15 15:05:49.870  INFO 15608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-15 15:05:49.870 DEBUG 15608 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-03-15 15:05:49.870  INFO 15608 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3060 ms
+2019-03-15 15:05:50.420 DEBUG 15608 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2019-03-15 15:05:50.480  INFO 15608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-15 15:05:50.560  INFO 15608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-15 15:05:50.630  INFO 15608 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-15 15:05:50.700  INFO 15608 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-15 15:05:50.700  INFO 15608 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-15 15:05:50.820  INFO 15608 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-15 15:05:50.950  INFO 15608 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-03-15 15:05:51.120  INFO 15608 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@c0c5feaf'
+2019-03-15 15:05:51.130  INFO 15608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-15 15:05:51.208  INFO 15608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-15 15:05:51.318 DEBUG 15608 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-03-15 15:05:51.608  INFO 15608 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-15 15:05:51.618 DEBUG 15608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-03-15 15:05:51.648  WARN 15608 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-15 15:05:51.708 DEBUG 15608 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2019-03-15 15:05:51.728 DEBUG 15608 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-03-15 15:05:51.738 DEBUG 15608 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-03-15 15:05:51.818  INFO 15608 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-03-15 15:05:52.189  INFO 15608 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-15 15:05:52.299  INFO 15608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-15 15:05:52.299  INFO 15608 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Started PetclinicApplication in 6.209 seconds (JVM running for 7.579)
+2019-03-15 15:05:54.689  INFO 15608 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-15 15:05:54.689  INFO 15608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-15 15:05:54.689 DEBUG 15608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-03-15 15:05:54.699 DEBUG 15608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-03-15 15:05:54.699  INFO 15608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-03-15 15:05:54.719 DEBUG 15608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/1", parameters={}
+2019-03-15 15:05:54.729 DEBUG 15608 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<com.muditasoft.petclinic.model.Owner> com.muditasoft.petclinic.rest.PetclinicRestController.getOwner(java.lang.Long)
+2019-03-15 15:05:54.849 DEBUG 15608 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 15:05:54.849 DEBUG 15608 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Owner{id=1, name='Tutku', surname='Ince'}]
+2019-03-15 15:05:54.869 DEBUG 15608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:06:44.538 DEBUG 15608 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/1", parameters={}
+2019-03-15 15:06:44.538 DEBUG 15608 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<com.muditasoft.petclinic.model.Owner> com.muditasoft.petclinic.rest.PetclinicRestController.getOwner(java.lang.Long)
+2019-03-15 15:06:44.548 DEBUG 15608 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 15:06:44.548 DEBUG 15608 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Owner{id=1, name='Tutku', surname='Ince'}]
+2019-03-15 15:06:44.548 DEBUG 15608 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:07:15.933 DEBUG 15608 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/1", parameters={}
+2019-03-15 15:07:15.944 DEBUG 15608 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<com.muditasoft.petclinic.model.Owner> com.muditasoft.petclinic.rest.PetclinicRestController.getOwner(java.lang.Long)
+2019-03-15 15:07:15.946 DEBUG 15608 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 15:07:15.946 DEBUG 15608 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Owner{id=1, name='Tutku', surname='Ince'}]
+2019-03-15 15:07:15.948 DEBUG 15608 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:09:07.759  INFO 10724 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Starting PetclinicApplication on DESKTOP-4GSH56K with PID 10724 (C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic\target\classes started by tutku in C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic)
+2019-03-15 15:09:07.769  INFO 10724 --- [restartedMain] c.m.petclinic.PetclinicApplication       : No active profile set, falling back to default profiles: default
+2019-03-15 15:09:07.859  INFO 10724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-15 15:09:07.859  INFO 10724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-15 15:09:09.359  INFO 10724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-15 15:09:09.389  INFO 10724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-03-15 15:09:10.179  INFO 10724 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6959e796] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-15 15:09:10.219  INFO 10724 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$e8da34c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-15 15:09:10.759  INFO 10724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-03-15 15:09:10.789  INFO 10724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-15 15:09:10.789  INFO 10724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-15 15:09:10.799  INFO 10724 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.1+13\bin\compressedrefs;C:\Program Files\Java\jdk-11.0.1+13\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Brackets\command;C:\Program Files\Apache Software Foundation\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk-11.0.1+13\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Users\tutku\AppData\Local\Microsoft\WindowsApps;C:\Users\tutku\AppData\Roaming\npm;.]
+2019-03-15 15:09:10.909  INFO 10724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-15 15:09:10.909 DEBUG 10724 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-03-15 15:09:10.909  INFO 10724 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3050 ms
+2019-03-15 15:09:11.459 DEBUG 10724 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2019-03-15 15:09:11.509  INFO 10724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-15 15:09:11.600  INFO 10724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-15 15:09:11.659  INFO 10724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-15 15:09:11.719  INFO 10724 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-15 15:09:11.719  INFO 10724 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-15 15:09:11.840  INFO 10724 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-15 15:09:11.961  INFO 10724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-03-15 15:09:12.141  INFO 10724 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@9a7d2771'
+2019-03-15 15:09:12.141  INFO 10724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-15 15:09:12.201  INFO 10724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-15 15:09:12.291 DEBUG 10724 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-03-15 15:09:12.531  INFO 10724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-15 15:09:12.541 DEBUG 10724 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-03-15 15:09:12.571  WARN 10724 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-15 15:09:12.611 DEBUG 10724 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2019-03-15 15:09:12.631 DEBUG 10724 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-03-15 15:09:12.641 DEBUG 10724 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-03-15 15:09:12.711  INFO 10724 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-03-15 15:09:13.021  INFO 10724 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-15 15:09:13.131  INFO 10724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-15 15:09:13.131  INFO 10724 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Started PetclinicApplication in 6.189 seconds (JVM running for 8.216)
+2019-03-15 15:09:17.949  INFO 10724 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-15 15:09:17.949  INFO 10724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-15 15:09:17.949 DEBUG 10724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-03-15 15:09:17.959 DEBUG 10724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-03-15 15:09:17.959  INFO 10724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-03-15 15:09:17.989 DEBUG 10724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2019-03-15 15:09:17.999 DEBUG 10724 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8]
+2019-03-15 15:09:18.799 DEBUG 10724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:09:18.849 DEBUG 10724 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2019-03-15 15:09:18.859 DEBUG 10724 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-03-15 15:09:18.959 DEBUG 10724 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:09:18.989 DEBUG 10724 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2019-03-15 15:09:18.989 DEBUG 10724 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-03-15 15:09:19.059 DEBUG 10724 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:09:25.710 DEBUG 10724 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/rest/owners", parameters={}
+2019-03-15 15:09:25.720 DEBUG 10724 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<java.util.List<com.muditasoft.petclinic.model.Owner>> com.muditasoft.petclinic.rest.PetclinicRestController.getOwners()
+2019-03-15 15:09:25.740 DEBUG 10724 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 15:09:25.740 DEBUG 10724 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Owner{id=1, name='Tutku', surname='Ince'}, Owner{id=2, name='Emin', surname='Koklu'}, Owner{id=3, n (truncated)...]
+2019-03-15 15:09:25.790 DEBUG 10724 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:09:30.862 DEBUG 10724 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/rest/owners/1", parameters={}
+2019-03-15 15:09:30.862 DEBUG 10724 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-03-15 15:09:30.862 DEBUG 10724 --- [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-03-15 15:09:30.862 DEBUG 10724 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2019-03-15 15:09:30.872 DEBUG 10724 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2019-03-15 15:09:30.872 DEBUG 10724 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-15 15:09:30.882 DEBUG 10724 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2019-03-15 15:09:30.892 DEBUG 10724 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2019-03-15 15:09:36.053 DEBUG 10724 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/1", parameters={}
+2019-03-15 15:09:36.063 DEBUG 10724 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<com.muditasoft.petclinic.model.Owner> com.muditasoft.petclinic.rest.PetclinicRestController.getOwner(java.lang.Long)
+2019-03-15 15:09:36.073 DEBUG 10724 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 15:09:36.073 DEBUG 10724 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Owner{id=1, name='Tutku', surname='Ince'}]
+2019-03-15 15:09:36.073 DEBUG 10724 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:13:07.632  INFO 3480 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Starting PetclinicApplication on DESKTOP-4GSH56K with PID 3480 (C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic\target\classes started by tutku in C:\Users\tutku\eclipse\jee-2018-09\eclipse\workspace\Spring\petclinic)
+2019-03-15 15:13:07.642  INFO 3480 --- [restartedMain] c.m.petclinic.PetclinicApplication       : No active profile set, falling back to default profiles: default
+2019-03-15 15:13:07.732  INFO 3480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-15 15:13:07.732  INFO 3480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-15 15:13:09.292  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-15 15:13:09.322  INFO 3480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-03-15 15:13:10.092  INFO 3480 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$20d8abf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-15 15:13:10.122  INFO 3480 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$818dd7f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-15 15:13:10.652  INFO 3480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-03-15 15:13:10.682  INFO 3480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-15 15:13:10.692  INFO 3480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-15 15:13:10.692  INFO 3480 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.1+13\bin\compressedrefs;C:\Program Files\Java\jdk-11.0.1+13\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Brackets\command;C:\Program Files\Apache Software Foundation\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk-11.0.1+13\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Users\tutku\AppData\Local\Microsoft\WindowsApps;C:\Users\tutku\AppData\Roaming\npm;.]
+2019-03-15 15:13:10.812  INFO 3480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-15 15:13:10.812 DEBUG 3480 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-03-15 15:13:10.812  INFO 3480 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3080 ms
+2019-03-15 15:13:11.322 DEBUG 3480 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2019-03-15 15:13:11.402  INFO 3480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-15 15:13:11.482  INFO 3480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-15 15:13:11.552  INFO 3480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-15 15:13:11.622  INFO 3480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-15 15:13:11.622  INFO 3480 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-15 15:13:11.742  INFO 3480 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-15 15:13:11.872  INFO 3480 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-03-15 15:13:12.053  INFO 3480 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3339b817'
+2019-03-15 15:13:12.063  INFO 3480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-15 15:13:12.113  INFO 3480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-15 15:13:12.203 DEBUG 3480 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-03-15 15:13:12.453  INFO 3480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-15 15:13:12.473 DEBUG 3480 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-03-15 15:13:12.493  WARN 3480 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-15 15:13:12.543 DEBUG 3480 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2019-03-15 15:13:12.573 DEBUG 3480 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-03-15 15:13:12.583 DEBUG 3480 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-03-15 15:13:12.643  INFO 3480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-03-15 15:13:12.953  INFO 3480 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-15 15:13:13.063  INFO 3480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-15 15:13:13.073  INFO 3480 --- [restartedMain] c.m.petclinic.PetclinicApplication       : Started PetclinicApplication in 6.061 seconds (JVM running for 7.452)
+2019-03-15 15:13:22.039  INFO 3480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-15 15:13:22.039  INFO 3480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-15 15:13:22.039 DEBUG 3480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-03-15 15:13:22.049 DEBUG 3480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-03-15 15:13:22.049  INFO 3480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-03-15 15:13:22.069 DEBUG 3480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/rest/owners", parameters={}
+2019-03-15 15:13:22.079 DEBUG 3480 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<java.util.List<com.muditasoft.petclinic.model.Owner>> com.muditasoft.petclinic.rest.PetclinicRestController.getOwners()
+2019-03-15 15:13:22.169 DEBUG 3480 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-03-15 15:13:22.179 DEBUG 3480 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Owner{id=1, name='Tutku', surname='Ince'}, Owner{id=2, name='Emin', surname='Koklu'}, Owner{id=3, n (truncated)...]
+2019-03-15 15:13:22.239 DEBUG 3480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:13:25.419 DEBUG 3480 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/1", parameters={}
+2019-03-15 15:13:25.429 DEBUG 3480 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<?> com.muditasoft.petclinic.rest.PetclinicRestController.getOwnerAsHateoasResource(java.lang.Long)
+2019-03-15 15:13:25.459 DEBUG 3480 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json]
+2019-03-15 15:13:25.479 DEBUG 3480 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Resource { content: Owner{id=1, name='Tutku', surname='Ince'}, links: [<http://localhost:8080/rest/o (truncated)...]
+2019-03-15 15:13:25.499 DEBUG 3480 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-15 15:13:58.647 DEBUG 3480 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/rest/owner/2", parameters={}
+2019-03-15 15:13:58.657 DEBUG 3480 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<?> com.muditasoft.petclinic.rest.PetclinicRestController.getOwnerAsHateoasResource(java.lang.Long)
+2019-03-15 15:13:58.657 DEBUG 3480 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [application/json]
+2019-03-15 15:13:58.657 DEBUG 3480 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Resource { content: Owner{id=2, name='Emin', surname='Koklu'}, links: [<http://localhost:8080/rest/o (truncated)...]
+2019-03-15 15:13:58.657 DEBUG 3480 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

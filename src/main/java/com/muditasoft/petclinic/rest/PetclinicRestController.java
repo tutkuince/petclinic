@@ -70,4 +70,16 @@ public class PetclinicRestController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    @DeleteMapping("/owner/{id}")
+    public ResponseEntity<?> deleteOwner(@PathVariable("id") Long id) {
+        try {
+            petclinicService.deleteOwner(id);
+            return ResponseEntity.ok().build();
+        } catch (OwnerNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }

@@ -7,7 +7,7 @@ import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
@@ -87,8 +87,8 @@ public class PetclinicRestControllerTest {
         try {
             restTemplate.getForEntity("http://localhost:8080/rest/owner/4", Owner.class);
             Assertions.fail("should have not returned owner!");
-        } catch (RestClientException e) {
-
+        } catch (HttpClientErrorException e) {
+            MatcherAssert.assertThat(e.getStatusCode().value(), Matchers.equalTo(404));
         }
     }
 }

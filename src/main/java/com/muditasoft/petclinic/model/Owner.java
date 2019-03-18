@@ -1,13 +1,24 @@
 package com.muditasoft.petclinic.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name = "owner")
 public class Owner {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "petClinicSeqGen")
+    @SequenceGenerator(name = "petClinicSeqGen", sequenceName = "petclinic_sequence")
     private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "surname")
     private String surname;
 
+    @OneToMany(mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
     public Long getId() {

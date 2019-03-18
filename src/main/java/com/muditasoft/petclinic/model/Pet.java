@@ -1,12 +1,28 @@
 package com.muditasoft.petclinic.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pet")
 public class Pet {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "petClinicSeqGen")
+    @SequenceGenerator(name = "petClinicSeqGen", sequenceName = "petclinic_sequence")
     private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "birth_date")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     public Long getId() {

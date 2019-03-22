@@ -4,6 +4,7 @@ import com.muditasoft.petclinic.dao.OwnerRepository;
 import com.muditasoft.petclinic.exception.OwnerNotFoundException;
 import com.muditasoft.petclinic.model.Owner;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class PetclinicServiceImpl implements PetclinicService {
     private OwnerRepository ownerRepository;
 
     @Autowired
-    public PetclinicServiceImpl(OwnerRepository ownerRepository) {
+    public PetclinicServiceImpl(@Qualifier("ownerRepositoryJpaImpl") OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
     }
 

@@ -6,10 +6,13 @@ import com.muditasoft.petclinic.model.Owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class PetclinicServiceImpl implements PetclinicService {
 
     private OwnerRepository ownerRepository;
@@ -20,16 +23,19 @@ public class PetclinicServiceImpl implements PetclinicService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
     public List<Owner> findOwners() {
         return ownerRepository.findAll();
     }
 
     @Override
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
     public List<Owner> findOwners(String surname) {
         return ownerRepository.findBySurname(surname);
     }
 
     @Override
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
     public Owner findOwner(Long id) throws OwnerNotFoundException {
         Owner owner = ownerRepository.findById(id);
 

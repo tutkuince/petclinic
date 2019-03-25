@@ -29,7 +29,7 @@ public class PetRepositoryJpaImpl implements PetRepository {
     }
 
     @Override
-    public List<Pet> findOwnerId(Long id) {
+    public List<Pet> findByOwnerId(Long id) {
         return entityManager.createQuery("from Pet where owner.id =: id", Pet.class).setParameter("id", id).getResultList();
     }
 

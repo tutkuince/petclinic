@@ -1,4 +1,11 @@
 body {
-    background-color: dodgerblue;
+    background-color: #ccc;
     color: white;
+}
+
+#error {
+    font-style: italic;
+    color: red;
+    padding: 10px;
+    background-color: dodgerblue;
 }

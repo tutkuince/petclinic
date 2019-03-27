@@ -42,6 +42,6 @@ public class PetclinicController {
         petclinicService.createOwner(owner3);
         petclinicService.createOwner(owner4);
 
-        return "index";
+        return "redirect:/owners";
     }
 }

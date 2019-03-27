@@ -13,7 +13,7 @@ public class PetclinicController {
     @Autowired
     private PetclinicService petclinicService;
 
-    @GetMapping("/owners")
+    @GetMapping(value = {"/", "/owners"})
     public String getOwners(Model model) {
         model.addAttribute("owners", petclinicService.findOwners());
         return "index";

@@ -12,10 +12,10 @@ public class Owner {
     @SequenceGenerator(name = "petClinicSeqGen", sequenceName = "petclinic_sequence")
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "surname")
+    @Column(name = "surname", nullable = false)
     private String surname;
 
     @OneToMany(mappedBy = "owner")

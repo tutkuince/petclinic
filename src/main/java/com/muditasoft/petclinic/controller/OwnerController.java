@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 
@@ -31,10 +32,11 @@ public class OwnerController {
     }
 
     @PostMapping("/saveOwner")
-    public String createNewOwnerForm(@Valid Owner owner, BindingResult bindingResult) {
+    public String createNewOwnerForm(@Valid Owner owner, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors())
             return "createOwnerForm";
         petclinicService.createOwner(owner);
+        redirectAttributes.addFlashAttribute("message", "Owner created with id " + owner.getId());
         return "redirect:/owners";
     }
 
@@ -46,16 +48,19 @@ public class OwnerController {
     }
 
     @PostMapping("/updateOwner")
-    public String updateOwner(@Valid Owner owner, BindingResult bindingResult) {
+    public String updateOwner(@Valid Owner owner, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors())
             return "updateOwnerForm";
+
         petclinicService.updateOwner(owner);
+        redirectAttributes.addFlashAttribute("message", "Owner updated with id " + owner.getId());
         return "redirect:/owners";
     }
 
     @GetMapping("/delete")
-    public String deleteOwner(@RequestParam("id") Long id) {
+    public String deleteOwner(@RequestParam("id") Long id, RedirectAttributes redirectAttributes) {
         petclinicService.deleteOwner(id);
+        redirectAttributes.addFlashAttribute("message", "Owner deleted with id " + id);
         return "redirect:/owners";
     }
 }

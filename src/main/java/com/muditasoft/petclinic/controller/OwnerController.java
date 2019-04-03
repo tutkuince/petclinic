@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/owners")
@@ -29,6 +30,19 @@ public class OwnerController {
     @PostMapping("/saveOwner")
     public String createNewOwnerForm(Owner owner) {
         petclinicService.createOwner(owner);
+        return "redirect:/owners";
+    }
+
+    @GetMapping("/updateForm")
+    public String updateOwnerForm(Model model, @RequestParam("id") Long id) {
+        final Owner owner = petclinicService.findOwner(id);
+        model.addAttribute("owner", owner);
+        return "updateOwnerForm";
+    }
+
+    @PostMapping("/updateOwner")
+    public String updateOwner(Owner owner) {
+        petclinicService.updateOwner(owner);
         return "redirect:/owners";
     }
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Owner Form</title>
+</head>
+<body>
+<form th:action="@{/owners/updateOwner}" method="post" th:object="${owner}">
+    <input type="hidden" th:value="*{id}">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+        <tr>
+            <td>Surname</td>
+            <td>
+                <input type="text" th:field="*{surname}">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Update Owner">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

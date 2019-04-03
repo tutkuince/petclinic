@@ -12,11 +12,15 @@
             <th>ID</th>
             <th>Name</th>
             <th>Surname</th>
+            <th>Update</th>
         </tr>
         <tr th:each="owner : ${owners}">
             <td th:text="${owner.id}"></td>
             <td th:text="${owner.name}"></td>
             <td th:text="${owner.surname}"></td>
+            <td>
+                <a th:href="@{/owners/updateForm(id=${owner.id})}">Update</a>
+            </td>
         </tr>
     </table>
 

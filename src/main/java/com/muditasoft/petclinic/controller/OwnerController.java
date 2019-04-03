@@ -5,10 +5,13 @@ import com.muditasoft.petclinic.service.PetclinicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/owners")
@@ -28,7 +31,9 @@ public class OwnerController {
     }
 
     @PostMapping("/saveOwner")
-    public String createNewOwnerForm(Owner owner) {
+    public String createNewOwnerForm(@Valid Owner owner, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
+            return "createOwnerForm";
         petclinicService.createOwner(owner);
         return "redirect:/owners";
     }
@@ -41,7 +46,9 @@ public class OwnerController {
     }
 
     @PostMapping("/updateOwner")
-    public String updateOwner(Owner owner) {
+    public String updateOwner(@Valid Owner owner, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
+            return "updateOwnerForm";
         petclinicService.updateOwner(owner);
         return "redirect:/owners";
     }

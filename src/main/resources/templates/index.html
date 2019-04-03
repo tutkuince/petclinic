@@ -13,6 +13,7 @@
             <th>Name</th>
             <th>Surname</th>
             <th>Update</th>
+            <td>Delete</td>
         </tr>
         <tr th:each="owner : ${owners}">
             <td th:text="${owner.id}"></td>
@@ -20,6 +21,9 @@
             <td th:text="${owner.surname}"></td>
             <td>
                 <a th:href="@{/owners/updateForm(id=${owner.id})}">Update</a>
+            </td>
+            <td>
+                <a th:href="@{/owners/delete(id=${owner.id})}">Delete</a>
             </td>
         </tr>
     </table>

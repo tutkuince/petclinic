@@ -45,4 +45,10 @@ public class OwnerController {
         petclinicService.updateOwner(owner);
         return "redirect:/owners";
     }
+
+    @GetMapping("/delete")
+    public String deleteOwner(@RequestParam("id") Long id) {
+        petclinicService.deleteOwner(id);
+        return "redirect:/owners";
+    }
 }

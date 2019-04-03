@@ -1,6 +1,7 @@
 package com.muditasoft.petclinic.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,9 +13,11 @@ public class Owner {
     @SequenceGenerator(name = "petClinicSeqGen", sequenceName = "petclinic_sequence")
     private Long id;
 
+    @NotEmpty(message = "Name is mandatory")
     @Column(name = "name", nullable = false)
     private String name;
 
+    @NotEmpty(message = "Surname is mandatory")
     @Column(name = "surname", nullable = false)
     private String surname;
 

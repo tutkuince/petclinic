@@ -5,6 +5,8 @@ import com.muditasoft.petclinic.exception.OwnerNotFoundException;
 import com.muditasoft.petclinic.model.Owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -18,9 +20,12 @@ public class PetclinicServiceImpl implements PetclinicService {
 
     private OwnerRepository ownerRepository;
 
+    private JavaMailSender mailSender;
+
     @Autowired
-    public PetclinicServiceImpl(@Qualifier("ownerRepositoryJpaImpl") OwnerRepository ownerRepository) {
+    public PetclinicServiceImpl(@Qualifier("ownerRepositoryJpaImpl") OwnerRepository ownerRepository, JavaMailSender mailSender) {
         this.ownerRepository = ownerRepository;
+        this.mailSender = mailSender;
     }
 
     @Override
@@ -51,6 +56,14 @@ public class PetclinicServiceImpl implements PetclinicService {
     @Override
     public void createOwner(Owner owner) {
         ownerRepository.create(owner);
+
+        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+        simpleMailMessage.setFrom("k@s");
+        simpleMailMessage.setTo("m@y");
+        simpleMailMessage.setSubject("Owner created");
+        simpleMailMessage.setText("Owner entity with id: " + owner.getId() + " created successfully.");
+
+        mailSender.send(simpleMailMessage);
     }
 
     @Override

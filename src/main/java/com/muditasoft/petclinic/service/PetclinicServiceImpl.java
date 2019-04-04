@@ -26,7 +26,7 @@ public class PetclinicServiceImpl implements PetclinicService {
     private VetRepository vetRepository;
 
     @Autowired
-    public PetclinicServiceImpl(OwnerRepository ownerRepository, JavaMailSender mailSender, VetRepository vetRepository) {
+    public PetclinicServiceImpl(@Qualifier("ownerRepositoryJpaImpl") OwnerRepository ownerRepository, JavaMailSender mailSender, VetRepository vetRepository) {
         this.ownerRepository = ownerRepository;
         this.mailSender = mailSender;
         this.vetRepository = vetRepository;

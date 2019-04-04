@@ -1,7 +1,9 @@
 package com.muditasoft.petclinic.service;
 
 import com.muditasoft.petclinic.exception.OwnerNotFoundException;
+import com.muditasoft.petclinic.exception.VetNotFoundException;
 import com.muditasoft.petclinic.model.Owner;
+import com.muditasoft.petclinic.model.Vet;
 
 import java.util.List;
 
@@ -12,4 +14,7 @@ public interface PetclinicService {
     void createOwner(Owner owner);
     void updateOwner(Owner owner);
     void deleteOwner(Long id);
+
+    List<Vet> findVets();
+    Vet findVet(Long id) throws VetNotFoundException;
 }

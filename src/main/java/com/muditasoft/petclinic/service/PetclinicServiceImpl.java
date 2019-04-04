@@ -1,8 +1,11 @@
 package com.muditasoft.petclinic.service;
 
 import com.muditasoft.petclinic.dao.OwnerRepository;
+import com.muditasoft.petclinic.dao.jpa.VetRepository;
 import com.muditasoft.petclinic.exception.OwnerNotFoundException;
+import com.muditasoft.petclinic.exception.VetNotFoundException;
 import com.muditasoft.petclinic.model.Owner;
+import com.muditasoft.petclinic.model.Vet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.SimpleMailMessage;
@@ -19,13 +22,14 @@ import java.util.List;
 public class PetclinicServiceImpl implements PetclinicService {
 
     private OwnerRepository ownerRepository;
-
     private JavaMailSender mailSender;
+    private VetRepository vetRepository;
 
     @Autowired
-    public PetclinicServiceImpl(@Qualifier("ownerRepositoryJpaImpl") OwnerRepository ownerRepository, JavaMailSender mailSender) {
+    public PetclinicServiceImpl(OwnerRepository ownerRepository, JavaMailSender mailSender, VetRepository vetRepository) {
         this.ownerRepository = ownerRepository;
         this.mailSender = mailSender;
+        this.vetRepository = vetRepository;
     }
 
     @Override
@@ -74,5 +78,15 @@ public class PetclinicServiceImpl implements PetclinicService {
     @Override
     public void deleteOwner(Long id) {
         ownerRepository.delete(id);
+    }
+
+    @Override
+    public List<Vet> findVets() {
+        return vetRepository.findAll();
+    }
+
+    @Override
+    public Vet findVet(Long id) throws VetNotFoundException {
+        return vetRepository.findById(id).orElseThrow(() -> new VetNotFoundException("Vet not found by id: " + id));
     }
 }

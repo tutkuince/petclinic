@@ -1,6 +1,7 @@
 package com.muditasoft.petclinic;
 
 import com.muditasoft.petclinic.model.Owner;
+import com.muditasoft.petclinic.model.Vet;
 import com.muditasoft.petclinic.service.PetclinicService;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -24,5 +25,11 @@ public class PetClinicIntegrationTest {
     public void testFindOwners() {
         final List<Owner> owners = petclinicService.findOwners();
         MatcherAssert.assertThat(owners.size(), Matchers.equalTo(4));
+    }
+
+    @Test
+    public void testFindVets() {
+        final List<Vet> vets = petclinicService.findVets();
+        MatcherAssert.assertThat(vets.size(), Matchers.equalTo(2));
     }
 }
